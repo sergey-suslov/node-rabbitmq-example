@@ -2,7 +2,7 @@ import amqp from 'amqplib'
 import _ from 'lodash'
 
 /**
- * @var {MessageBroker}
+ * @var {Promise<MessageBroker>}
  */
 let instance;
 
@@ -23,6 +23,7 @@ class MessageBroker {
   async init() {
     this.connection = await amqp.connect(process.env.RABBITMQ_URL || 'amqp://localhost');
     this.channel = await this.connection.createChannel();
+    return this
   }
 
   /**
@@ -77,8 +78,8 @@ class MessageBroker {
  */
 MessageBroker.getInstance = async function() {
   if (!instance) {
-    instance = new MessageBroker();
-    await instance.init();
+    const broker = new MessageBroker();
+    instance = broker.init()
   }
   return instance;
 };
