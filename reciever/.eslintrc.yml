@@ -1,0 +1,14 @@
+env:
+  browser: true
+  es6: true
+extends: 'koa'
+globals:
+  Atomics: readonly
+  SharedArrayBuffer: readonly
+parserOptions:
+  ecmaVersion: 2018
+  sourceType: module
+rules:
+  semi: ["error", "never"]
+  quotes: ["error", "single"]
+  require-atomic-updates: [0]

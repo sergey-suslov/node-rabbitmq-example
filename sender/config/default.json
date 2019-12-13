@@ -1,0 +1,28 @@
+{
+  "maxLimit": 50,
+  "log": {
+    "level": "trace"
+  },
+  "crypto": {
+    "hash": {
+      "length": 128
+    }
+  },
+  "session": {
+    "lifetime": 3600000,
+    "lifetimeRefresh": 432000000
+  },
+  "jwt": {
+    "secret": "60ecf8bdc557c873c968a2ae512e2e0e82a160796dfaafce8001b8ae3b459190",
+    "lifetime": 86400000
+  },
+  "db": {
+    "name": "senum",
+    "userName": "user",
+    "userPassword": "password"
+  },
+  "files": {
+    "maxDepth": 10,
+    "maxChildren": 50
+  }
+}
