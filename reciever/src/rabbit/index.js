@@ -63,7 +63,7 @@ class MessageBroker {
       async (msg) => {
         const ack = _.once(() => this.channel.ack(msg))
         this.queues[queue].forEach(h => h(msg, ack))
-      }, {noAck: false}
+      }
     );
     return () => this.unsubscribe(queue, handler)
   }
