@@ -18,7 +18,7 @@
     "@babel/register": "^7.5.5",
     "amqplib": "^0.5.5",
     "boom": "^7.3.0",
-    "config": "^3.2.1",
+    "config": "^3.3.8",
     "crypto": "^1.0.1",
     "dotenv": "^8.0.0",
     "eslint-plugin-react": "^7.16.0",
